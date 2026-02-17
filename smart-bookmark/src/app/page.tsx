@@ -21,7 +21,7 @@ export default function LoginPage() {
     await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: 'https://smart-bookmark-app-pi-brown.vercel.app/dashboard'
+        redirectTo: 'https://smart-bookmark-app-gold-gamma.vercel.app/dashboard'
       }
     })
   }
