@@ -37,7 +37,6 @@ export default function Dashboard() {
     getUser();
   }, [router]);
 
-
   useEffect(() => {
     if (!user?.id) return;
 
@@ -123,7 +122,13 @@ export default function Dashboard() {
       <div className="max-w-3xl mx-auto py-12 px-6">
         {/* Header */}
         <div className="flex justify-between items-center mb-10">
-          <h1 className="text-3xl font-bold text-gray-800">Smart Bookmark</h1>
+          <div>
+            <h1 className="text-3xl font-bold text-gray-800">Smart Bookmark</h1>
+            <p className="text-sm text-gray-500 mt-1">
+              {user?.email?.charAt(0).toUpperCase()} is logged in
+            </p>
+          </div>
+
           <button
             onClick={logout}
             className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg transition text-sm cursor-pointer"
@@ -179,7 +184,7 @@ export default function Dashboard() {
             >
               <div>
                 <p className="text-sm text-gray-500 mt-1 truncate max-w-md">
-                  {bookmark.created_at.split('T')[0]}
+                  {bookmark.created_at.split("T")[0]}
                 </p>
                 <a
                   href={bookmark.url}
