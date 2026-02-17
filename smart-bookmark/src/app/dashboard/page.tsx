@@ -125,7 +125,7 @@ export default function Dashboard() {
           <div>
             <h1 className="text-3xl font-bold text-gray-800">Smart Bookmark</h1>
             <p className="text-sm text-gray-500 mt-1">
-              {user?.email?.charAt(0).toUpperCase()} is logged in
+              Logged in as {user?.email}
             </p>
           </div>
 
