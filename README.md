@@ -243,4 +243,3 @@ Smart Bookmark App is:
 Built with ❤️ using Next.js and Supabase.
 
 ---
-
